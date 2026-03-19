@@ -144,7 +144,7 @@ const proxyServer = createServer((clientSocket, clientRequest) => {
       clientSocket.write('HTTP/1.1 502 Bad Gateway\r\n\r\n');
       clientSocket.end();
     });
-  } else {
+  } else if (url) {
     const parsedUrl = parse(url);
     const options = {
       hostname: parsedUrl.hostname,
