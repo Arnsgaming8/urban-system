@@ -363,23 +363,31 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-[var(--border)] py-8 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="border-t border-[var(--border)] py-8 px-4 mt-auto">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-6">
+        <div className="text-center">
+          <p className="text-sm" style={{ color: 'var(--text-secondary)', maxWidth: '600px', lineHeight: '1.6' }}>
+            This software is provided for authorized use only. Users are strictly prohibited from utilizing 
+            this service for any unlawful activities, including but not limited to unauthorized access to 
+            computer systems, data breaches, or any activity that violates applicable laws and regulations. 
+            By using this service, you agree to comply with all applicable terms and conditions.
+          </p>
+        </div>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-[var(--primary)] flex items-center justify-center">
-            <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+          <div className="w-6 h-6 rounded-full bg-[var(--primary)] flex items-center justify-center">
+            <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
             </svg>
           </div>
-          <span className="font-semibold">VreePN</span>
+          <span className="font-semibold">© 2026 VreePN. All Rights Reserved.</span>
         </div>
-        <div className="text-sm text-[var(--text-secondary)]">
-          Programmed By Arnav Jugessur, Designed By Kilo AI
+        <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+          Programmed by Arnav Jugessur | Designed by Kilo AI
         </div>
-        <div className="flex gap-4">
-          <a href="#" className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors">Privacy</a>
-          <a href="#" className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors">Terms</a>
-          <a href="#" className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors">Contact</a>
+        <div className="flex gap-6">
+          <a href="#" className="text-sm hover:text-[var(--primary)] transition-colors" style={{ color: 'var(--text-secondary)' }}>Privacy Policy</a>
+          <a href="#" className="text-sm hover:text-[var(--primary)] transition-colors" style={{ color: 'var(--text-secondary)' }}>Terms of Service</a>
+          <a href="#" className="text-sm hover:text-[var(--primary)] transition-colors" style={{ color: 'var(--text-secondary)' }}>Contact</a>
         </div>
       </div>
     </footer>
